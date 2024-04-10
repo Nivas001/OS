@@ -136,6 +136,7 @@ public class Prg_1 {
 
 
             default:
+
                 System.out.println("Please choose correct Operation!!");
         }
 
@@ -145,6 +146,7 @@ public class Prg_1 {
             for (int i = 1; i < no; i++) {
                 wt[i] = bt[i - 1] + wt[i - 1];
             }
+
 
             //calculating the Turn around time for FCFS
             for(int i=0; i<no; i++){
@@ -163,8 +165,8 @@ public class Prg_1 {
             ttat += tat[i];
         }
 
-        System.out.println("Average Waiting time : "+twt);
-        System.out.println("Average Turn around time : "+ttat);
+        System.out.println("Average Waiting time : "+twt/no);
+        System.out.println("Average Turn around time : "+ttat/no);
 
     }
 
@@ -174,6 +176,8 @@ public class Prg_1 {
             for (int j = i+1; j< no; j++){
                 if(at[i] > at[j]){
                     int temp = at[i];
+
+
                     at[i] = at[j];
                     at[j] = temp;
 
