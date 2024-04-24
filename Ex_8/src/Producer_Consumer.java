@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Producer_Consumer {
 
 
-    static int mutex = 1, full = 0, empty = 3, x = 0;
+    static int mutex = 1, full = 0, empty = 0, x = 0;
 
     static int wait(int s) {
         return (--s);
@@ -45,13 +45,13 @@ class Producer_Consumer {
                     if ((mutex == 1) && (empty != 0))
                         producer();
                     else
-                        System.out.println("BUFFER IS FULL");
+                        System.out.println("\tBUFFER IS FULL\n");
                     break;
                 case 2:
                     if ((mutex == 1) && (full != 0))
                         consumer();
                     else
-                        System.out.println("BUFFER IS EMPTY");
+                        System.out.println("\tBUFFER IS EMPTY\n");
                     break;
                 case 3:
                     System.exit(0);
