@@ -14,6 +14,8 @@ public class Contiguous_file {
         //Creating a Array of files using the no. of files
         int[] file = new int[no];
         String[] name = new String[no];
+        int[] start = new int[no];
+        int[] fully = new int[no];
 
         for(int i=0; i<no; i++){
             System.out.println("\n"+(i+1));
@@ -21,11 +23,15 @@ public class Contiguous_file {
             name[i] = s.next();
             System.out.print("Enter the size of the file : ");
             file[i] = s.nextInt();
+            System.out.println("Enter the start of the file : ");
+            start[i] = s.nextInt();
+
         }
 
         int size = full;
         for (int i=0; i<no; i++){
             if (file[i] <= full){
+                fully[i] = start[i] + file[i];
                 System.out.println("File "+name[i]+" is allocated to the disk");
                 full = full - file[i];
             } else {
@@ -33,15 +39,21 @@ public class Contiguous_file {
             }
         }
 
-        full = 0;
 
+        int total = 0;
         System.out.println("\nFile name \t\t\t File size \t\t\t Starting Address \t\t\t Ending Address");
-        for(int i=0; i<no; i++){
-            System.out.println(name[i]+"\t\t\t\t\t"+file[i]+"\t\t\t\t\t"+full+"\t\t\t\t\t"+(full+file[i]));
-            full = full + file[i];
+        for(int i=0; i<no; i++) {
+            if (file[i] <= size) {
+                System.out.println(name[i] + "\t\t\t\t\t" + file[i] + "\t\t\t\t\t" + start[i] + "\t\t\t\t\t\t\t" + (fully[i]));
+                size = size - file[i];
+                total += file[i];
+            } else {
+                System.out.println(name[i] + "\t\t\t\t\t" + file[i] + "\t\t\t\t\t" + "Not Allocated" + "\t\t\t\t\t" + "Not Allocated");
+            }
         }
+        total = total - size;
 
-        System.out.println("\nRemaining space in the disk is : "+(size - full));
+        System.out.println("\nRemaining space in the disk is : "+total);
     }
 
 }
