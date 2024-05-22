@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/All LAB Programs/All LAB Programs.iml" filepath="$PROJECT_DIR$/All LAB Programs/All LAB Programs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex_10/Ex_10.iml" filepath="$PROJECT_DIR$/Ex_10/Ex_10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex_3/Ex_3.iml" filepath="$PROJECT_DIR$/Ex_3/Ex_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex_5/Ex_5.iml" filepath="$PROJECT_DIR$/Ex_5/Ex_5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex_6/Ex_6.iml" filepath="$PROJECT_DIR$/Ex_6/Ex_6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ex_7/Ex_7.iml" filepath="$PROJECT_DIR$/Ex_7/Ex_7.iml" />
       <module fileurl="file://$PROJECT_DIR$/Ex_8/Ex_8.iml" filepath="$PROJECT_DIR$/Ex_8/Ex_8.iml" />
       <module fileurl="file://$PROJECT_DIR$/OS.iml" filepath="$PROJECT_DIR$/OS.iml" />
     </modules>

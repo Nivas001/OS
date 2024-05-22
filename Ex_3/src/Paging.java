@@ -1,6 +1,5 @@
-import java.util.*;
-
-public class Contiguous_file {
+import  java.util.*;
+public class Paging {
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
         int no, full;
@@ -38,22 +37,5 @@ public class Contiguous_file {
                 System.out.println("Storage Error!!!! File "+name[i]+" is not allocated to the disk");
             }
         }
-
-
-        int total = 0;
-        System.out.println("\nFile name \t\t\t File size \t\t\t Starting Address \t\t\t Ending Address");
-        for(int i=0; i<no; i++) {
-            if (file[i] <= size) {
-                System.out.println(name[i] + "\t\t\t\t\t" + file[i] + "\t\t\t\t\t" + start[i] + "\t\t\t\t\t\t\t" + (fully[i]));
-                size = size - file[i];
-                total += file[i];
-            } else {
-                System.out.println(name[i] + "\t\t\t\t\t" + file[i] + "\t\t\t\t\t" + "Not Allocated" + "\t\t\t\t\t" + "Not Allocated");
-            }
-        }
-        total = total - size;
-
-        System.out.println("\nRemaining space in the disk is : "+total);
     }
-
 }
